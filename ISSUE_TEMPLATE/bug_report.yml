@@ -1,0 +1,47 @@
+name: Bug report
+description: Something in KrakenKey doesn't work as expected
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please don't include API keys, private keys, tokens or other secrets.
+        Security problems go through a private report instead: see the security policy.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run '...'
+        2. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: For example the output of `krakenkey version`, the connector or probe version, or the action / provider version you pinned.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, browser, Terraform/OpenTofu version, or CI runner, whichever applies.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Remove anything sensitive before pasting.
+      render: shell
